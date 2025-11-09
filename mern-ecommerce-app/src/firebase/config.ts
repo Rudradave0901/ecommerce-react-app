@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBsAA0n-sp40E__NoNRgmrRVJJwFvnrojo",
-  authDomain: "e-commorce-react.firebaseapp.com",
-  projectId: "e-commorce-react",
-  storageBucket: "e-commorce-react.firebasestorage.app",
-  messagingSenderId: "644196653606",
-  appId: "1:644196653606:web:39a9cc09180cd826a524e7",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 console.log("FIREBASE CONFIG:", firebaseConfig);
