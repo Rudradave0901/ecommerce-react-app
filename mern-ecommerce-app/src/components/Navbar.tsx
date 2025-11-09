@@ -25,9 +25,9 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow-sm py-4 px-6 flex justify-between items-center">
-      <Link to="/" className="text-2xl font-bold text-blue-600">MyStore</Link>
+      <Link to="/" className="sm:text-2xl font-bold text-blue-600">MyStore</Link>
 
-      <div className="flex items-center gap-5">
+      <div className="flex items-center md:gap-5 gap-3">
         <Link to="/" className="hover:text-blue-600 transition">Home</Link>
         <Link to="/cart" className="hover:text-blue-600 transition">Cart</Link>
         {user.uid ? (
@@ -50,7 +50,7 @@ export default function Navbar() {
             </Link>
             <Link
               to="/signup"
-              className="border border-blue-600 text-blue-600 px-4 py-1.5 rounded hover:bg-blue-50 transition"
+              className="border border-blue-600 text-blue-600 px-4 py-1.5 rounded hover:bg-blue-50 transition hidden sm:block"
             >
               Signup
             </Link>

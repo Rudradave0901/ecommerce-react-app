@@ -21,7 +21,7 @@ export default function Login() {
   };
 
   return (
-    <div className="max-w-sm mx-auto my-16">
+    <div className="max-w-sm mx-auto my-16 px-[30px] sm:px-0">
       <h2 className="text-2xl font-bold mb-4">Login</h2>
       <form onSubmit={handleLogin} className="space-y-4">
         <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="w-full p-3 border rounded" />

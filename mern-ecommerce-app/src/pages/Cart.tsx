@@ -18,12 +18,12 @@ export default function Cart() {
         <>
           <ul className="space-y-4">
             {items.map((item) => (
-              <li key={item.id} className="flex justify-between items-center border-b pb-3">
+              <li key={item.id} className="flex justify-between sm:items-center border-b pb0-3 flex-col sm:flex-row">
                 <div className="flex items-center gap-4">
                   <img src={item.image} alt={item.title} className="w-16 h-16 rounded" />
                   <p>{item.title}</p>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-6 my-3 sm:my-0">
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => dispatch(decreaseQty(item.id))}
