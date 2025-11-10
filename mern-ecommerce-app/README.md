@@ -1,73 +1,27 @@
-# React + TypeScript + Vite
+# E-Commerce React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live: https://ecommerce-react-app-191p.vercel.app/  
+Tech: React + Vite, TypeScript, Redux Toolkit, Firebase Auth, Firestore, TailwindCSS
 
-Currently, two official plugins are available:
+## Features
+- Auth (signup/login, protected routes)
+- Product listing + details
+- Cart with qty control and localStorage persistence
+- Orders stored per user in Firestore
+- Responsive UI + toasts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Screenshots
+<img width="1905" height="926" alt="image" src="https://github.com/user-attachments/assets/50833ca2-2d26-4290-9c52-f7c33390fa65" />
+<img width="1905" height="926" alt="image" src="https://github.com/user-attachments/assets/5953de8c-2af3-45cb-bf50-9d7289c5987e" />
+<img width="1905" height="925" alt="image" src="https://github.com/user-attachments/assets/83e322ec-32e9-44b1-93c4-3edbf3cf8b49" />
+<img width="1905" height="757" alt="image" src="https://github.com/user-attachments/assets/438d3f32-15a3-4412-8d1a-7ebe98d87d9b" />
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Run locally
+```bash
+git clone https://github.com/Rudradave0901/ecommerce-react-app.git
+cd mern-ecommerce-app
+cp .env.example .env   # fill Firebase values
+npm install
+npm run dev
